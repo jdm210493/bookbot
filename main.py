@@ -1,4 +1,7 @@
+
 # python
+from stats import count_words
+
 def get_book_text(filepath):
     #open the file at 'filepath' and ensure it closes automatically
      with open(filepath) as f:
@@ -6,10 +9,6 @@ def get_book_text(filepath):
         book_content = f.read()
         # give the text back to the caller
         return book_content
-
-def count_words(text_string):
-    words = text_string.split()
-    return len(words)
 
 def main():
     # relative path to the book file from this script
