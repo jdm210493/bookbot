@@ -1,6 +1,6 @@
 
 # python
-from stats import count_words
+from stats import count_words, count_chars
 
 def get_book_text(filepath):
     #open the file at 'filepath' and ensure it closes automatically
@@ -15,8 +15,12 @@ def main():
     path = "books/frankenstein.txt"
     # get the book text by reading the file
     book_content = get_book_text(path)
+
     num_words = count_words(book_content)
-    print(f"{num_words} words found in the document")  
+    print(f"{num_words} words found in the document")
+
+    chars = count_chars(book_content)
+    print(chars)
 
 # run the program when this file is executed
 main()
